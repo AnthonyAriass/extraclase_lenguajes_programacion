@@ -1,4 +1,4 @@
-% Definición de las calorías de cada alimento
+% Definiciï¿½n de las calorï¿½as de cada alimento
 calorias(guacamole, 200).
 calorias(ensalada, 150).
 calorias(consome, 300).
@@ -14,27 +14,27 @@ calorias(nueces_con_miel, 500).
 calorias(naranja_confitada, 450).
 calorias(flan_coco, 375).
 
-% Definición de las categorías de alimentos: entrada, carne, pescado, postre
+% Definiciï¿½n de las categorï¿½as de alimentos: entrada, carne, pescado, postre
 
 entrada(guacamole).
 entrada(ensalada).
 entrada(consome).
 entrada(tostadas_caprese).
 
+% En este ejemplo vamos a utilizar tanto carne como pescado como uno solo, ya que ambos son proteÃ­nas.
 carne(filete_cerdo).
 carne(pollo_horno).
 carne(carne_salsa).
-
-pescado(tilapia).
-pescado(salmon).
-pescado(trucha).
+carne(tilapia).
+carne(salmon).
+carne(trucha).
 
 postre(flan).
 postre(nueces_con_miel).
 postre(naranja_confitada).
 postre(flan_coco).
 
-% Definición de una combinación válida de alimentos con sus calorías totales
+% Definiciï¿½n de una combinaciï¿½n vï¿½lida de alimentos con sus calorï¿½as totales
 combinacion(Entrada, Carne, Postre, Calorias) :-
     entrada(Entrada),
     carne(Carne),
@@ -44,7 +44,7 @@ combinacion(Entrada, Carne, Postre, Calorias) :-
     calorias(Postre, CaloriasPostre),
     Calorias is CaloriasEntrada + CaloriasCarne + CaloriasPostre.
 
-% Predicado para encontrar las primeras 5 combinaciones que no exceden un límite de calorías dado
+% Predicado para encontrar las primeras 5 combinaciones que no exceden un lï¿½mite de calorï¿½as dado
 combinaciones_hasta(CaloriasMax, Combinaciones) :-
     findall((Entrada, Carne, Postre, Calorias),
             (combinacion(Entrada, Carne, Postre, Calorias),
